@@ -25,7 +25,7 @@ router.post('/login_process', function (request, response) {
     var password = request.body.pwd;
     if (username && password) {             // id와 pw가 입력되었는지 확인
         
-        db.query(`SELECT * FROM user WHERE username = '${username}' AND password = '${password}'`, [username, password], function(error, results, fields) {
+        db.query(`SELECT * FROM user WHERE username = '${username}' AND password = '${password}'`, function(error, results, fields) {
             if (error) throw error;
             if (results.length > 0) {       // db에서의 반환값이 있으면 로그인 성공
                 request.session.is_logined = true;      // 세션 정보 갱신
