@@ -12,7 +12,7 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
-  secret: 'cat',	// 원하는 문자 입력
+  secret: 'sqlinjection',	// 원하는 문자 입력
   resave: false,
   saveUninitialized: true,
   store:new FileStore(),
