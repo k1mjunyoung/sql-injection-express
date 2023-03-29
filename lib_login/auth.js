@@ -10,13 +10,21 @@ router.get("/login", function (request, response) {
   var html = template.HTML(
     title,
     `
-            <h2>로그인</h2>
-            <form action="/auth/login_process" method="post">
-            <p><input class="login" type="text" name="username" placeholder="아이디"></p>
-            <p><input class="login" type="text" name="pwd" placeholder="비밀번호"></p>
-            <p><input class="btn" type="submit" value="로그인"></p>
-            </form>            
-            <p>계정이 없으신가요?  <a href="/auth/register">회원가입</a></p> 
+    <div class="wrapper">
+      <div class="container">
+        <div class="sign-in-container">
+          <form action="/auth/login_process" method="post">
+            <h1>로그인</h1>
+            <input type="text" name="username" placeholder="아이디" />
+            <input type="password" name="pwd" placeholder="비밀번호" />
+            <button class="form_btn" type="submit">로그인</button>
+            <button>
+              계정이 없으신가요? <a href="/auth/register">회원가입</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
         `,
     ""
   );
@@ -73,21 +81,11 @@ router.get("/register", function (request, response) {
             <input type="text" name="username" placeholder="아이디" />
             <input type="password" name="pwd" placeholder="비밀번호" />
             <input type="password" name="pwd2" placeholder="비밀번호 재확인" />
-            <button class="form_btn" type="submit">제출</button>
+            <button class="form_btn" type="submit">가입</button>
+            <button>
+              <a href="/auth/login">로그인 화면으로 돌아가기</a>
+            </button>
           </form>
-        </div>
-        <div class="overlay-container">
-          <div class="overlay-left">
-            <h1>Welcome Back</h1>
-            <p>
-              To keep connected with us please login with your personal info
-            </p>
-            <button id="signIn" class="overlay_btn">Sign In</button>
-          </div>
-          <div class="overlay-right">
-            <h1>SQL Injection</h1>
-            <button id="signUp" class="overlay_btn">회원가입</button>
-          </div>
         </div>
       </div>
     </div>
