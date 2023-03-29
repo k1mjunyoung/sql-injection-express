@@ -154,6 +154,10 @@ module.exports = {
           justify-content: center;
         }
         
+        .main-text {
+          margin-top: 180px;
+          text-align: center;
+        }
         
       </style>
       </head>
