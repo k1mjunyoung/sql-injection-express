@@ -18,10 +18,10 @@ router.get("/login", function (request, response) {
             <input type="text" name="username" placeholder="아이디" />
             <input type="password" name="pwd" placeholder="비밀번호" />
             <button class="form_btn" type="submit">로그인</button>
-            <button>
-              계정이 없으신가요? <a href="/auth/register">회원가입</a>
-            </button>
           </form>
+          <span class="anchor-text">
+            계정이 없으신가요? <a href="/auth/register">회원가입</a>
+          </span>
         </div>
       </div>
     </div>
@@ -82,10 +82,10 @@ router.get("/register", function (request, response) {
             <input type="password" name="pwd" placeholder="비밀번호" />
             <input type="password" name="pwd2" placeholder="비밀번호 재확인" />
             <button class="form_btn" type="submit">가입</button>
-            <button>
-              <a href="/auth/login">로그인 화면으로 돌아가기</a>
-            </button>
           </form>
+          <span class="anchor-text">
+            <a href="/auth/login">로그인 화면으로 돌아가기</a>
+          </span>
         </div>
       </div>
     </div>
