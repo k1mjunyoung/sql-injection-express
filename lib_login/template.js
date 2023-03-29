@@ -159,6 +159,18 @@ module.exports = {
           text-align: center;
         }
         
+        .alert-text {
+          text-align: center;
+          padding: 20px 0;
+          background: #1b2b1d;
+          color: #c4dfc5;
+        }
+        
+        .alert-text a {
+          text-decoration: none;
+          color: white;
+        }
+
       </style>
       </head>
       <body>
